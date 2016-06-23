@@ -16,7 +16,7 @@ You can also skip the whole thing by git cloning this repository, running npm in
 
 ### *Build the server*
 
-1. Install the Heroku toolbelt from here https://toolbelt.heroku.com to launch, stop and monitor instances. Sign up for free at https://www.heroku.com if you don't have an account yet.
+1. Install the ```cf```` command line tool from https://github.com/cloudfoundry/cli to deploy and manage your app on Cloud Foundry. If you don't have your own Cloud Foundry installed, you can sign up for free at http://run.pivotal.io/ to get started.
 
 2. Install Node from here https://nodejs.org, this will be the server environment. Then open up Terminal or Command Line Prompt and make sure you've got the very most recent version of npm by installing it again:
 
@@ -73,20 +73,10 @@ You can also skip the whole thing by git cloning this repository, running npm in
     })
     ```
 
-6. Make a file called Procfile and copy this. This is so Heroku can know what file to run.
+6. Deploy your application to Cloud Foundry.
 
     ```
-    web: node index.js
-    ```
-
-7. Commit all the code with Git then create a new Heroku instance and push the code to the cloud.
-
-    ```
-    git init
-    git add .
-    git commit --message 'hello world'
-    heroku create
-    git push heroku master
+    cf push myapp
     ```
 
 ### *Setup the Facebook App*
